@@ -19,7 +19,7 @@ public class TC_002 {
 		driver.get("https://www.facebook.com/");
 		driver.manage().timeouts().pageLoadTimeout(1,TimeUnit.SECONDS);
 		driver.findElementById("email").sendKeys("ganesan");
-		driver.findElementById("pass").sendKeys("ganesh");
+		driver.findElementById("pass").sendKeys("ganeshHari");
 		driver.quit();
 	}
 	
