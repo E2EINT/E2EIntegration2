@@ -11,8 +11,8 @@ public class TC_001 {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver/chromedriver");
 		ChromeDriver driver  = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
-		driver.findElementById("email").sendKeys("ganesan");
-		driver.findElementById("pass").sendKeys("ganesh");
+		driver.findElementById("email").sendKeys("ganesanHari");
+		driver.findElementById("pass").sendKeys("ganesan");
 		driver.quit();
 	}
 	
