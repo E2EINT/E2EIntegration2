@@ -83,13 +83,13 @@ public class TC_006 { //Typing Test
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys("ensure that we are maintaining the highest standards in the quality of our products and the satisfaction of our customers. If necessary, we could maintain the consultant or hire a full-time quality-control person to see that the recommendations of the committee are implemented promptly and effectively. An alternative plan calls for a"); 
 		Thread.sleep(8000);
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys("select committee of executives to survey methods of quality control used at companies most similar to our own. Such companies could include Ajax Manufacturing, the Leviathan Corporation and Olympus Industries. Under this plan, the executive committee could compile a list of methods used by our rivals to achieve high quality. After all of");
-		Thread.sleep(8000);
+		Thread.sleep(88000);
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys("the data are compiled, the executive committee would determine which methods would best be adopted to maintain top-notch quality in our products. Once the new techniques are determined, the executives could purchase any necessary equipment. In addition, they may also decide upon additional training for managers, workers and inspectors in order");
 		Thread.sleep(8000);
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys(" to put the new methods into effect. By presenting employees with a completed plan, rather than asking for suggestions and recommendations, we can save needed time and the cost of hiring an outside consultant. Under this plan, the executive committee could meet with managers and inspectors weekly to see that the new methods are being properly");
-		Thread.sleep(8000);
+		Thread.sleep(000);
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys(" implemented and that the quality of our products is improving. Once the initial recommendations are implemented, it might be wise to begin rotating the membership of this committee so all executives could become involved in the drive for higher quality. Rotating the membership would also allow executives to bring their special expertise");
-		Thread.sleep(8000);
+		Thread.sleep(7000);
 		driver.findElement(By.xpath(".//*[@id='typingform_rtx6']")).sendKeys("to the problem and offer some fresh insights and suggestions. Please consider the two possible plans and bring your thoughts to our staff meeting next week.");
 		
 	
