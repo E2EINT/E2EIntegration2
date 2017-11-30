@@ -3,10 +3,9 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="TestCases.TC_004"/>
-      <class name="TestCases.TC_003"/>
-      <class name="TestCases.TC_002"/>
-      <class name="TestCases.TC_001"/>
+      <class name="TestCases.TestAnotationClass"/>
+      <class name="TestCases.TestAnotation"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
