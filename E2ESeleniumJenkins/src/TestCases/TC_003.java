@@ -3,6 +3,8 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class TC_003 { //Allegis - Recruitment Coordinator - RC
@@ -13,8 +15,8 @@ public class TC_003 { //Allegis - Recruitment Coordinator - RC
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver/chromedriver");
 		ChromeDriver driver  = new ChromeDriver();
 		driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		//WebDriverWait wait = new WebDriverWait(driver,40);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver,60);
 		driver.findElementByName("ID").sendKeys("qatest");
 		driver.findElementByName("username").sendKeys("administrator");
 		driver.findElementByName("password").sendKeys("Sk1llCheck!");
@@ -52,13 +54,16 @@ public class TC_003 { //Allegis - Recruitment Coordinator - RC
 		String val = "button"+j;
 		driver.findElement(By.xpath(".//*[@id='"+val+"']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
+		Thread.sleep(2000);
 			}
 				}
-		Thread.sleep(4000);
+	
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"find out why they have a problem with my work."));Thread.sleep(1000);
 	    driver.findElement(By.xpath(".//*[@id='button3']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath(".//*[@id='btnContinue']")).click();
+		Thread.sleep(4000);
 		driver.findElement(By.xpath(".//*[@id='btnExitTestSession']")).click();
 	}
 }

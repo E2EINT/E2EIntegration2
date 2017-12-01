@@ -3,6 +3,8 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class TC_004 { //Accounting - Financial Statements
@@ -14,7 +16,7 @@ public class TC_004 { //Accounting - Financial Statements
 		ChromeDriver driver  = new ChromeDriver();
 		driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		//WebDriverWait wait = new WebDriverWait(driver,40);
+		WebDriverWait wait = new WebDriverWait(driver,40);
 		driver.findElementByName("ID").sendKeys("qatest");
 		driver.findElementByName("username").sendKeys("administrator");
 		driver.findElementByName("password").sendKeys("Sk1llCheck!");
@@ -34,119 +36,130 @@ public class TC_004 { //Accounting - Financial Statements
 		driver.findElement(By.xpath("//option[@value='Caucasian']")).click();
 		driver.findElement(By.xpath("//option[@value='I prefer not to answer']")).click();
 		driver.findElement(By.xpath("//button[@id='btnCompleteReg']")).click();
-		//driver.findElement(By.xpath(".//*[@id='btnAgree']")).click();
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='btnBeginTest']"),"START"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnBeginTest']")).click();
-		//driver.findElement(By.xpath(".//*[@id='button3']")).click();
-		Thread.sleep(4000);
+		//CONTINUE TEST
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='btnAnswerComplete']"),"CONTINUE"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-	    Thread.sleep(4000);
-	    //driver.findElement(By.xpath(".//*[@id='button3']")).click();
+		//NEXT CLICK 
+	    wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='btnAnswerComplete']"),"NEXT"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		//CLICK START TEST BUTTON
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='btnAnswerComplete']"),"START TEST"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-        Thread.sleep(4000);
+        // question number 01
+        wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"reviewed"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button3']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 02
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='options_rtx0']"),"Acid Test"));Thread.sleep(1000);   
         driver.findElement(By.xpath(".//*[@id='options_btn0']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+        // question number 03
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='options_rtx0']"),"Gross Profit Ratio"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='options_btn0']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
-        driver.findElement(By.xpath(".//*[@id='options_btn0']")).click();
+		// question number 04
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text2']"),"Days of Inventory on Hand"));Thread.sleep(1000);
+        driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
-        driver.findElement(By.xpath(".//*[@id='options_btn0']")).click();
+		// question number 05
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"Return on Tangible Assets"));Thread.sleep(1000);
+        driver.findElement(By.xpath(".//*[@id='button3']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 06
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"Both companies yielded the same return on investment."));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button4']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 07
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text2']"),"False"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 08
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"$96.00"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 09
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text2']"),"False"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 10
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"Net Asset Value Per Share"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
+		// question number 11
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"Checking account balance of $100"));Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='button2']")).click();
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
-		Thread.sleep(4000);
-        driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		// question number 12
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the amount of Working Capital. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+        driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$8000");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		// SKIP 13 question 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Current Ratio. (Express the answer as a decimal, rounded to the nearest tenth.)"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnAnswerSkip']")).click();
-		Thread.sleep(4000);
-        driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		// SKIP 14 question 
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Quick Net Assets. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+        driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$9909");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		// SKIP 15 question 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Quick Ratio. (Express the answer as a decimal, rounded to the nearest tenth.)"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnAnswerSkip']")).click();
 		//  16 question 
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Gross Profit. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$25500");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 	     //  17 question 
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Gross Profit Percentage. (Express the answer as a percentage, rounded to the nearest tenth.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$56745");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		//  18 question 
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Average Day Sales. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$34006");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		//  19 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the number of day sales in Accounts Receivable. (Round the answer to the nearest whole number.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$5,000,000");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 	    //  20 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Total Debt. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$200,900");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		 //  21 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Total Equity. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$400,500");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		//  22 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Debt to Equity. (Express the answer as a percentage, rounded to the nearest tenth.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$700,700");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 	   //  23 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Net Profit. (Round the answer to the nearest dollar.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$4040,300");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		//  24 question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Return on Net Sales (Profit Margin). (Express the answer as a percentage, rounded to the nearest tenth.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$300,000");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		// SKIP 25 question 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"If Working Capital is $2,550,000 and Total Assets are $5,000,000, calculate the ratio of Working Capital to Total Assets. (Express the answer as a percentage, rounded to the nearest whole number.)"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnAnswerSkip']")).click();
 		//click Review button
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='btnReview']"),"REVIEW"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnReview']")).click();
 		//Click on Review question 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='headerDataScreen5d']"),"Review"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='lblSecondCell1']/u/i")).click();
-	    // answer review question 14th question
-		Thread.sleep(4000);
-		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("Gan123");
+	    // answer review question 15th question
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='stem_rtx0']"),"Using the information displayed above, calculate the Quick Ratio. (Express the answer as a decimal, rounded to the nearest tenth.)"));Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='search1']")).sendKeys("$400.00");
 		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click();
 		//Click on Exit button 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='headerDataScreen5d']"),"Review"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btn5cExit']")).click();
 		//Click on Exit/finish button 
-		Thread.sleep(4000);
+		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='headerDataScreen5']"),"Finished!"));Thread.sleep(1000);
 		driver.findElement(By.xpath(".//*[@id='btnExitTestSession']")).click();
-		
-	
 		
 	}
 	
