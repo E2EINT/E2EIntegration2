@@ -11,7 +11,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class TC_002 { //Asurion PSS Part 1 (2014)
+//Asurion PSS Part 1 (2014) - Regression Automation Scripts 
+//Client-required test2: "ENASPT12014","Asurion PSS Part 1 (2014)
+
+public class TC_002 { 
 
 	@Test
 	public void testcase1() throws InterruptedException
@@ -25,7 +28,6 @@ public class TC_002 { //Asurion PSS Part 1 (2014)
 		driver.findElementByName("login").click();
 		driver.findElement(By.linkText("Administer Testing")).click();
 		driver.findElement(By.linkText("Administer Tests")).click();
-		//Client-required test2: "ENASPT12014","Asurion PSS Part 1 (2014)
 		driver.findElement(By.xpath("//select[@id='all_tests']/option[@value='ENASPT12014']")).click();
 		driver.findElement(By.xpath("//input[@name='add']")).click();
 		driver.findElement(By.xpath("//select[@name='sub_tests']/option[@value='ENASPT12014']")).click();

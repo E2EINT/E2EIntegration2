@@ -7,7 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class TC_003 { //Allegis - Recruitment Coordinator - RC
+//Allegis - Recruitment Coordinator - RC  - Regression Automation Scripts 
+//Client-required test1:"ENTAARC","Allegis - Recruitment Coordinator - RC
+
+public class TC_003 { 
 	@Test
 	public void testcase1() throws InterruptedException
 	{
@@ -23,7 +26,6 @@ public class TC_003 { //Allegis - Recruitment Coordinator - RC
 		driver.findElementByName("login").click();
 		driver.findElement(By.linkText("Administer Testing")).click();
 		driver.findElement(By.linkText("Administer Tests")).click();
-		//Client-required test1:"ENTAARC","Allegis - Recruitment Coordinator - RC
 		driver.findElement(By.xpath("//select[@id='all_tests']/option[@value='ENTAARC']")).click();
 		driver.findElement(By.xpath("//input[@name='add']")).click();
 		driver.findElement(By.xpath("//select[@name='sub_tests']/option[@value='ENTAARC']")).click();

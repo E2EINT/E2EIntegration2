@@ -7,7 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class TC_004 { //Accounting - Financial Statements
+//Accounting - Financial Statements - - Regression Automation Scripts
+//"EN_ACCIN","Accounting - Financial Statements
+
+public class TC_004 { 
 	@Test
 	public void testcase1() throws InterruptedException
 	{
@@ -23,7 +26,6 @@ public class TC_004 { //Accounting - Financial Statements
 		driver.findElementByName("login").click();
 		driver.findElement(By.linkText("Administer Testing")).click();
 		driver.findElement(By.linkText("Administer Tests")).click();
-		//"EN_ACCIN","Accounting - Financial Statements
 		driver.findElement(By.xpath("//select[@id='all_tests']/option[@value='EN_ACCIN']")).click();
 		driver.findElement(By.xpath("//input[@name='add']")).click();
 		driver.findElement(By.xpath("//select[@name='sub_tests']/option[@value='EN_ACCIN']")).click();

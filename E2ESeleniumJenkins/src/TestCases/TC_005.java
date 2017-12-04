@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+//Talent Acquisition - Guest Service Profile- Regression Automation Scripts 
+//"ENTAGSP","Talent Acquisition - Guest Service Profile"
+
 public class TC_005 {
 	@Test
 	public void testcase1() throws InterruptedException
@@ -26,7 +29,6 @@ public class TC_005 {
 		driver.findElementByName("login").click();
 		driver.findElement(By.linkText("Administer Testing")).click();
 		driver.findElement(By.linkText("Administer Tests")).click();
-		//"ENTAGSP","Talent Acquisition - Guest Service Profile"
 		driver.findElement(By.xpath("//select[@id='all_tests']/option[@value='ENTAGSP']")).click();
 		driver.findElement(By.xpath("//input[@name='add']")).click();
 		driver.findElement(By.xpath("//select[@name='sub_tests']/option[@value='ENTAGSP']")).click();

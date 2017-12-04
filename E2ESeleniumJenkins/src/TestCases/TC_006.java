@@ -20,7 +20,10 @@ import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Console;
 
-public class TC_006 { //Typing Test
+//Typing Test -  Regression Automation Scripts 
+//"Flash-based typing engine: "EN_TYPSS","Typing Test
+
+public class TC_006 { 
 	@Test
 	public void testcase1() throws InterruptedException
 	{
@@ -36,7 +39,6 @@ public class TC_006 { //Typing Test
 		driver.findElementByName("login").click();
 		driver.findElement(By.linkText("Administer Testing")).click();
 		driver.findElement(By.linkText("Administer Tests")).click();
-		//"Flash-based typing engine: "EN_TYPSS","Typing Test
 		driver.findElement(By.xpath("//select[@id='all_tests']/option[@value='EN_TYPSS']")).click();
 		driver.findElement(By.xpath("//input[@name='add']")).click();
 		driver.findElement(By.xpath("//select[@name='sub_tests']/option[@value='EN_TYPSS']")).click();
