@@ -40,9 +40,9 @@ public class TC_001 {
 		driver.findElement(By.xpath("//option[@value='Under 40']")).click();
 		driver.findElement(By.xpath("//option[@value='Caucasian']")).click();
 		driver.findElement(By.xpath("//option[@value='I prefer not to answer']")).click();
-		driver.findElement(By.xpath("//button[@id='btnCompleteReg']")).click(); Thread.sleep(1000);
-		driver.findElement(By.xpath(".//*[@id='btnBeginTest']")).click(); Thread.sleep(1000);
-		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click(); Thread.sleep(1000);	
+		driver.findElement(By.xpath("//button[@id='btnCompleteReg']")).click(); Thread.sleep(2000);
+		driver.findElement(By.xpath(".//*[@id='btnBeginTest']")).click(); Thread.sleep(2000);
+		driver.findElement(By.xpath(".//*[@id='btnAnswerComplete']")).click(); Thread.sleep(2000);	
 		WebElement elemnt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='tutorial1_btn0']")));
 		elemnt.click(); Thread.sleep(1000);
         driver.findElement(By.xpath(".//*[@id='tutorial1_btn0']")).click(); Thread.sleep(1000);
