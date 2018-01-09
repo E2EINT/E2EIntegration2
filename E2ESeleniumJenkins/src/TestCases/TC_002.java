@@ -91,7 +91,7 @@ public class TC_002 {
 		WebElement  sourcelocator4 = driver.findElement(By.xpath(".//*[@id='draggables_rtx4']"));
 		WebElement destinationlocator4 =driver.findElement(By.xpath(".//*[@id='droppables_tr3']"));
 	    Actions drag4=new Actions(driver);
-	    drag4.dragAndDrop(sourcelocator4,destinationlocator4).perform();
+	    drag4.dragAndDrop(sourcelocator4,destinationlocator4).perform();Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@id='btnAnswerComplete']")).click();
 		Thread.sleep(3000);
 		// Question number 5
@@ -232,7 +232,7 @@ public class TC_002 {
 		WebElement  sourcelocator213 = driver.findElement(By.xpath(".//*[@id='draggables_rtx4']"));
 		WebElement destinationlocator213 =driver.findElement(By.xpath(".//*[@id='droppables_tr0']"));
 	    Actions drag223=new Actions(driver);
-	    drag223.dragAndDrop(sourcelocator213,destinationlocator213).perform();
+	    drag223.dragAndDrop(sourcelocator213,destinationlocator213).perform();Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@id='btnAnswerComplete']")).click();
         // question # 22
 		wait.until(ExpectedConditions.textToBe(By.xpath(".//*[@id='text3']"),"Bada"));Thread.sleep(1000);
