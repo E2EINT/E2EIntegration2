@@ -3,6 +3,7 @@
 	<name>E2ESeleniumJenkins</name>
 	<comment></comment>
 	<projects>
+		<project>com.selenium.demo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
