@@ -3,6 +3,7 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -14,8 +15,9 @@ import org.testng.annotations.Test;
 //"EN_P5F_ST_F","PowerPoint 2013 - Standard
 
 public class TC_001 { 
+	public static WebDriver driver = null;
 	@Test
-	public void testcase1() throws InterruptedException
+	public static void testcase1() throws InterruptedException
 	{
 
 		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver/chromedriver");
