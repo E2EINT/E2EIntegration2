@@ -19,7 +19,8 @@ public class TC_001 {
 	{
 
 		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver/chromedriver");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
 		ChromeDriver driver  = new ChromeDriver();
 		driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
