@@ -19,7 +19,8 @@ public class TC_003 {
 		//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver/chromedriver");
 		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
 		ChromeDriver driver  = new ChromeDriver();
-		driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
+		//driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
+		driver.get("https://www.fadvassessments.com/onlinetesting/dev.html");
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver,60);
 		driver.findElementByName("ID").sendKeys("qatest");

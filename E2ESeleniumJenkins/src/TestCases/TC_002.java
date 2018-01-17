@@ -23,7 +23,8 @@ public class TC_002 {
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver/chromedriver");
 		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
 		ChromeDriver driver  = new ChromeDriver();
-		driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
+		//driver.get("https://www.fadvassessments.com/onlinetesting/gamma.html");
+		driver.get("https://www.fadvassessments.com/onlinetesting/dev.html");
 		driver.findElementByName("ID").sendKeys("qatest");
 		driver.findElementByName("username").sendKeys("administrator");
 		driver.findElementByName("password").sendKeys("Sk1llCheck!");
